@@ -65,9 +65,10 @@
         android:layout_height="wrap_content"
         android:text="Instagram"
         android:layout_weight="1"
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_below="@+id/etTwitter"
+        android:layout_toRightOf="@+id/imgFacebook"
+        android:layout_toLeftOf="@+id/etTwitter"
+        android:layout_toStartOf="@+id/etTwitter" />
 
     <CheckBox
         android:id="@+id/cbFacebook"
@@ -75,9 +76,12 @@
         android:layout_height="wrap_content"
         android:text="Facebook"
         android:layout_weight="1"
-        android:layout_below="@+id/cbInstagram"
+        android:layout_below="@+id/etInstagram"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/etInstagram"
+        android:layout_alignBottom="@+id/editText3"
+        android:layout_toLeftOf="@+id/etInstagram" />
 
     <CheckBox
         android:id="@+id/cbTwitter"
@@ -87,7 +91,9 @@
         android:layout_weight="1"
         android:layout_below="@+id/cbLinkedIn"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/etLinkedIn"
+        android:layout_toStartOf="@+id/etLinkedIn" />
 
     <CheckBox
         android:id="@+id/cbLinkedIn"
@@ -97,7 +103,9 @@
         android:layout_weight="1"
         android:layout_below="@+id/etNumber"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/etNumber"
+        android:layout_toStartOf="@+id/etNumber" />
 
 
 
@@ -174,4 +182,57 @@
         android:layout_toRightOf="@+id/btnSend"
         android:layout_toEndOf="@+id/btnSend"
         android:visibility="gone"/>
+
+    <EditText
+        android:id="@+id/etLinkedIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="www.linkedin.com/in/"
+        android:layout_alignBaseline="@+id/cbLinkedIn"
+        android:layout_alignBottom="@+id/cbLinkedIn"
+        android:layout_toRightOf="@+id/cbLinkedIn"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:id="@+id/etTwitter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/etLinkedIn"
+        android:layout_alignRight="@+id/etLinkedIn"
+        android:layout_below="@+id/cbLinkedIn"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="https://twitter.com/"
+        android:layout_toRightOf="@+id/cbLinkedIn"
+        android:layout_toEndOf="@+id/cbLinkedIn" />
+
+    <EditText
+        android:id="@+id/etInstagram"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etTwitter"
+        android:layout_alignStart="@+id/etTwitter"
+        android:layout_below="@+id/etTwitter"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="https://www.instagram.com/"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:id="@+id/etFacebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="https://www.facebook.com/"
+        android:layout_below="@+id/etInstagram"
+        android:layout_alignLeft="@+id/etInstagram"
+        android:layout_alignStart="@+id/etInstagram"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
 </RelativeLayout>

@@ -12,7 +12,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     private CheckBox cbName, cbEmail, cbNumber, cbLinkedIn, cbTwitter, cbFacebook, cbInstagram;
     private Button btnSend;
-    private EditText etName, etNumber, etEmail;
+    private EditText etName, etNumber, etEmail, etLinkedIn, etFacebook, etInstagram, etTwitter;
     private ImageButton imgFacebook, imgInstagram, imgTwitter, imgLinkedIn;
 
 
@@ -64,6 +64,10 @@ public class MainActivity extends AppCompatActivity {
         etName = (EditText) findViewById(R.id.etName);
         etNumber = (EditText) findViewById(R.id.etNumber);
         etEmail = (EditText) findViewById(R.id.etEmail);
+        etLinkedIn = (EditText) findViewById(R.id.etLinkedIn);
+        etFacebook = (EditText) findViewById(R.id.etFacebook);
+        etInstagram = (EditText) findViewById(R.id.etInstagram);
+        etTwitter = (EditText) findViewById(R.id.etTwitter);
         btnSend = (Button) findViewById(R.id.btnSend);
 
 
@@ -82,19 +86,19 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 if (cbLinkedIn.isChecked()) {
-                    result.append("\nLinkedIn: http://www.linkedin.com/...");
+                    result.append("\nLinkedIn: "+etLinkedIn.getText().toString());
                 }
 
                 if (cbTwitter.isChecked()) {
-                    result.append("\nTwitter: http://www.twitter.com/...");
+                    result.append("\nTwitter: "+etTwitter.getText().toString());
                 }
 
                 if (cbFacebook.isChecked()) {
-                    result.append("\nFacebook: http://www.facebook.com/...");
+                    result.append("\nFacebook: "+etFacebook.getText().toString());
                 }
 
                 if (cbInstagram.isChecked()) {
-                    result.append("\nInstagram: http://www.instagram.com/...");
+                    result.append("\nInstagram: "+etInstagram.getText().toString());;
                 }
 
                 Toast.makeText(MainActivity.this, result.toString().trim(), Toast.LENGTH_LONG).show();
